@@ -46,6 +46,7 @@ public class SigninControl {
 	@RequestMapping(value = "/signin", method = RequestMethod.GET)
 	public String login(@ModelAttribute("log")Student stu,Model model)
 			throws SQLException {
+		System.out.println("login method");
 		 boolean result = inter1.login(stu);
 		if (result==true) {
 			model.addAttribute("message", "suucessfully login");
